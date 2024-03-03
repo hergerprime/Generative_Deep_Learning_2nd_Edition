@@ -2,14 +2,13 @@ version: '3'
 
 services:
   devcontainer:
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: registry.gitlab.com/currax-data-science/generative_deep_learning_2nd_edition:v0.0.1
     tty: true
     volumes:
-      - /workspace/data/:/app/data
-      - /workspace/notebooks/:/app/notebooks
-      - /workspace/scripts/:/app/scripts
+      - ../..:/workspaces:cached
+      - ../data/:/app/data
+      - ../notebooks/:/app/notebooks
+      - ../scripts/:/app/scripts
     ports:
         - "8888:8888"
         - "6006:6006"
