@@ -19,7 +19,7 @@ jobs:
           password: ${{secrets.DOCKER_TOKEN}}
           
       - name: Build the Docker image
-        run: docker build -t registry.gitlab.com/currax-data-science/generative_deep_learning_2nd_edition:${{github.run_number}} -f docker/Dockerfile.codev .
+        run: docker build -t registry.gitlab.com/currax-data-science/generative_deep_learning_2nd_edition:${{github.run_number}} -f docker/Dockerfile.codespace .
 
 
       - name: Push Docker Image
