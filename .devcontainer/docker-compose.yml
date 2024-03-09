@@ -2,7 +2,7 @@ version: '3'
 
 services:
   devcontainer:
-    image: registry.gitlab.com/currax-data-science/generative_deep_learning_2nd_edition:v0.0.1
+    image: registry.gitlab.com/currax-data-science/generative_deep_learning_2nd_edition:5
     tty: true
     volumes:
       - ../..:/workspaces:cached
